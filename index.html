@@ -1,6 +1,7 @@
 <style>
-
-  * { box-sizing: border-box; }
+  * {
+    box-sizing: border-box;
+  }
 
   body {
     display: flex;
@@ -14,12 +15,594 @@
     position: relative;
     width: 500px;
     height: 500px;
-    border: 1px dashed;
+    border: 1px solid;
   }
 
+  .table {
+    position: absolute;
+    bottom: 33px;
+    left: 15px;
+    width: 470px;
+    height: 20px;
+    background: linear-gradient(180deg, #b89240 0%, #a88230 50%, #8a6820 100%);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  .can-back {
+    position: absolute;
+    bottom: 52px;
+    left: 68px;
+    width: 160px;
+    height: 175px;
+    z-index: 2;
+  }
+
+  .can-back .cb {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    width: 160px;
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg,
+        #8a6e08 0%,
+        #b89810 6%,
+        #d4b418 14%,
+        #e8c820 28%,
+        #f2d428 44%,
+        #f5d828 50%,
+        #f0d024 58%,
+        #e4c41c 70%,
+        #ccac14 82%,
+        #a8880c 94%,
+        #8a6e08 100%);
+  }
+
+  .can-back .cc {
+    position: absolute;
+    top: 38px;
+    left: -40px;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: #0e0e5c;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .can-back .cbu {
+    position: absolute;
+    top: 80px;
+    left: -50px;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #0e0e5c;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .can-back .ce {
+    position: absolute;
+    top: 120px;
+    left: -15px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    color: #0e0e5c;
+  }
+
+  .can-back .crb {
+    position: absolute;
+    top: 155px;
+    left: -50px;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg,
+        #6e1212 0%,
+        #981a1a 8%,
+        #b82222 20%,
+        #cc2828 40%,
+        #d42c2c 50%,
+        #cc2828 60%,
+        #b82222 78%,
+        #981a1a 92%,
+        #6e1212 100%);
+  }
+
+  .can-back .cr1 {
+    text-align: center;
+    padding-top: 5px;
+    font-family: sans-serif;
+    font-size: 8px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+
+  .can-back .cr2 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 7px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 0.6px;
+    margin-top: 1px;
+  }
+
+  .can-back .cr3 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 5px;
+    font-style: italic;
+    color: #ffffff;
+    margin-top: 2px;
+  }
+
+  .can-back .cr4 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 7px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 0.6px;
+    margin-top: 1px;
+  }
+
+  .can-front {
+    position: absolute;
+    bottom: 52px;
+    left: 260px;
+    width: 160px;
+    height: 175px;
+    z-index: 3;
+  }
+
+  .can-front .cb {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 160px;
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: linear-gradient(90deg,
+        #8a6e08 0%,
+        #b89810 6%,
+        #d4b418 14%,
+        #e8c820 28%,
+        #f2d428 44%,
+        #f5d828 50%,
+        #f0d024 58%,
+        #e4c41c 70%,
+        #ccac14 82%,
+        #a8880c 94%,
+        #8a6e08 100%);
+  }
+
+  .can-front .cc {
+    position: absolute;
+    top: 38px;
+    left: 12px;
+    font-family: Georgia, serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: #0e0e5c;
+    line-height: 1;
+    letter-spacing: -2px;
+  }
+
+  .can-front .cbu {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #0e0e5c;
+    line-height: 1;
+    letter-spacing: -1px;
+  }
+
+  .can-front .ce {
+    position: absolute;
+    top: 120px;
+    left: 42px;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 12px;
+    color: #0e0e5c;
+  }
+
+  .can-front .crb {
+    position: absolute;
+    top: 155px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg,
+        #6e1212 0%,
+        #981a1a 8%,
+        #b82222 20%,
+        #cc2828 40%,
+        #d42c2c 50%,
+        #cc2828 60%,
+        #b82222 78%,
+        #981a1a 92%,
+        #6e1212 100%);
+  }
+
+  .can-front .cr1 {
+    text-align: center;
+    padding-top: 5px;
+    font-family: sans-serif;
+    font-size: 8px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+
+  .can-front .cr2 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 7px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 0.6px;
+    margin-top: 1px;
+  }
+
+  .can-front .cr3 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 5px;
+    font-style: italic;
+    color: #ffffff;
+    margin-top: 2px;
+  }
+
+  .can-front .cr4 {
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 7px;
+    font-weight: bold;
+    color: #ffffff;
+    letter-spacing: 0.6px;
+    margin-top: 1px;
+  }
+
+  .moka {
+    position: absolute;
+    bottom: 52px;
+    left: 190px;
+    width: 190px;
+    height: 320px;
+    z-index: 5;
+  }
+
+  .moka-base {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-110%);
+    width: 140px;
+    height: 95px;
+    clip-path: polygon(16% 0%, 84% 0%, 100% 100%, 0% 100%);
+    background: linear-gradient(90deg,
+        #686058 0%,
+        #888078 8%,
+        #a8a098 18%,
+        #c4bcb4 32%,
+        #d8d2ca 44%,
+        #e4ded8 50%,
+        #d8d2ca 56%,
+        #c4bcb4 66%,
+        #a8a098 78%,
+        #888078 90%,
+        #686058 100%);
+  }
+
+  .moka-collar {
+    position: absolute;
+    bottom: 95px;
+    left: 45%;
+    transform: translateX(-134%);
+    width: 90px;
+    height: 8px;
+    background: linear-gradient(180deg, #999, #c8c8c0 40%, #aaa);
+  }
+
+  .moka-upper {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-108%);
+    width: 145px;
+    height: 125px;
+    clip-path: polygon(18% 100%, 82% 100%, 91% 10%, 92% 0%, 8% 0%, 9% 10%);
+    background: linear-gradient(90deg,
+        #8e2e00 0%,
+        #a83800 6%,
+        #c24808 14%,
+        #d85818 28%,
+        #e86820 40%,
+        #f07228 48%,
+        #e86820 56%,
+        #d85818 66%,
+        #c24808 78%,
+        #a83800 90%,
+        #8e2e00 100%);
+    z-index: 98;
+  }
+
+  .moka-lid {
+    position: absolute;
+    bottom: 216px;
+    left: 46%;
+    transform: translateX(-108%);
+    width: 130px;
+    height: 22px;
+    border-radius: 50%;
+    background: linear-gradient(90deg,
+        #9a3000 0%,
+        #c84c10 25%,
+        #e86820 45%,
+        #f07228 50%,
+        #e86820 55%,
+        #c84c10 75%,
+        #9a3000 100%);
+    z-index: 99;
+  }
+
+  .moka-knob {
+    position: absolute;
+    bottom: 236px;
+    left: 15%;
+    transform: translateX(-158%);
+    width: 14px;
+    height: 22px;
+    background: linear-gradient(90deg,
+        #18101a,
+        #382838 40%,
+        #281828 70%,
+        #18101a);
+    border-radius: 3px 3px 2px 2px;
+  }
+
+  .moka-handle {
+    position: absolute;
+    bottom: 130px;
+    left: -68px;
+    width: 36px;
+    height: 90px;
+    border: 11px solid #1c1c1c;
+    border-right: none;
+    border-radius: 24px 0 0 18px;
+    background: transparent;
+  }
+
+  .moka-handle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -11px;
+    width: 11px;
+    height: 100%;
+    background: linear-gradient(90deg, #383838, #222 60%, #1c1c1c);
+    border-radius: 24px 0 0 18px;
+  }
+
+  .cup {
+    position: absolute;
+    width: 85px;
+    height: 92px;
+  }
+
+  .cup-1 {
+    bottom: 52px;
+    left: 210px;
+    z-index: 6;
+  }
+
+  .cup-2 {
+    bottom: 128px;
+    left: 210px;
+    z-index: 7;
+  }
+
+  .cup .cup-body {
+    position: absolute;
+    bottom: 0;
+    left: 17px;
+    width: 64px;
+    height: 80px;
+    border-radius: 2px 2px 5px 5px;
+    overflow: hidden;
+    box-shadow:
+      inset -2px 0 5px rgba(0, 0, 0, 0.08),
+      2px 3px 6px rgba(0, 0, 0, 0.25);
+    z-index: 90;
+  }
+
+  .cup .cup-stripes {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+        #003880 0%,
+        #003880 16px,
+        #f0ece4 16px,
+        #f0ece4 32px,
+        #003880 32px,
+        #003880 48px,
+        #f0ece4 48px,
+        #f0ece4 64px,
+        #003880 64px,
+        #003880 80px);
+  }
+
+  .cup .cup-triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    border-left: 31px solid #c41420;
+  }
+
+  .cup .cup-star {
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .cup .cup-rim {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 66px;
+    height: 3px;
+    background: linear-gradient(180deg, #f0ebe2, #ddd5c8);
+    border-radius: 2px 2px 0 0;
+    z-index: 2;
+  }
+
+  .cup .cup-handle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+    left: 0px;
+    width: 17px;
+    height: 32px;
+    border: 5px solid #ffffff;
+    border-right: none;
+    border-radius: 11px 0 0 11px;
+  }
+
+  .cup-top {
+    position: absolute;
+    bottom: 252px;
+    left: 317px;
+    width: 85px;
+    height: 92px;
+    z-index: 4;
+  }
+
+  .cup-top .cup-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 64px;
+    height: 80px;
+    border-radius: 2px 2px 5px 5px;
+    overflow: hidden;
+    background: linear-gradient(180deg,
+        #0a3578 0px,
+        #0a3578 16px,
+        #f0ece4 16px,
+        #f0ece4 32px,
+        #0a3578 32px,
+        #0a3578 48px,
+        #f0ece4 48px,
+        #f0ece4 64px,
+        #0a3578 64px,
+        #0a3578 80px);
+    box-shadow:
+      inset -2px 0 4px rgba(0, 0, 0, 0.06),
+      2px 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 85;
+  }
+
+  .cup-top .cup-rim {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 66px;
+    height: 3px;
+    background: linear-gradient(180deg, #f0ebe2, #ddd5c8);
+    border-radius: 2px 2px 0 0;
+    z-index: 1;
+  }
+
+  .cup-top .cup-handle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+    right: 2px;
+    width: 17px;
+    height: 32px;
+    border: 5px solid #ffffff;
+    border-left: none;
+    border-radius: 0 11px 11px 0;
+  }
 </style>
 
-
 <div class="frame">
-  <!-- add your elements here -->
+  <div class="table"></div>
+  <div class="can-back">
+    <div class="cb">
+      <div class="cc">CAFÉ</div>
+      <div class="cbu">BUSTELO</div>
+      <div class="ce">Café Espresso</div>
+      <div class="crb">
+        <div class="cr1">SIEMPRE PURO Y PLENO</div>
+        <div class="cr2">COMO NINGÚN OTRO</div>
+        <div class="cr3">ENVASADO AL VACÍO</div>
+        <div class="cr4">PESO NETO 10 OZ</div>
+      </div>
+    </div>
+  </div>
+  <div class="can-front">
+    <div class="cb">
+      <div class="cc">CAFÉ</div>
+      <div class="cbu">BUSTELO</div>
+      <div class="ce">Café Espresso</div>
+      <div class="crb">
+        <div class="cr1">SIEMPRE PURO Y PLENO</div>
+        <div class="cr2">COMO NINGÚN OTRO</div>
+        <div class="cr3">ENVASADO AL VACÍO</div>
+        <div class="cr4">PESO NETO 10 OZ</div>
+      </div>
+    </div>
+  </div>
+  <div class="moka">
+    <div class="moka-knob"></div>
+    <div class="moka-lid"></div>
+    <div class="moka-upper"></div>
+    <div class="moka-collar"></div>
+    <div class="moka-base"></div>
+    <div class="moka-handle"></div>
+  </div>
+  <div class="cup cup-1">
+    <div class="cup-body">
+      <div class="cup-stripes"></div>
+      <div class="cup-triangle"></div>
+      <div class="cup-star">★</div>
+      <div class="cup-rim"></div>
+    </div>
+    <div class="cup-handle"></div>
+  </div>
+  <div class="cup cup-2">
+    <div class="cup-body">
+      <div class="cup-stripes"></div>
+      <div class="cup-triangle"></div>
+      <div class="cup-star">★</div>
+      <div class="cup-rim"></div>
+    </div>
+    <div class="cup-handle"></div>
+  </div>
+  <div class="cup-top">
+    <div class="cup-body">
+      <div class="cup-rim"></div>
+    </div>
+    <div class="cup-handle"></div>
+  </div>
 </div>
